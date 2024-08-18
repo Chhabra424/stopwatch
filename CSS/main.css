@@ -1,0 +1,219 @@
+
+@import url(./global.css);
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../img/bgClockPattern02.jpg');
+}
+
+header{
+    width: 400px;
+    font-size: 22px;
+    color: rgb(66, 66, 66);
+    margin-bottom: 40px;
+    background-color: rgba(161, 255, 107, 0.897);
+    display: flex;
+    padding: 15px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 0px 50px 50px;
+    align-self: flex-start;
+    margin-left: 20px;
+}
+
+header h2{
+    margin-left: 25px;
+}
+
+main{
+width: fit-content;
+height: fit-content;
+ display: flex;
+ padding: 10px;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+
+}
+
+/* ------------------ StopWatch body ------------------- */
+.container{
+    background-color: rgba(221, 221, 221, 0.445);
+    border-radius: 500px;
+    width: 680px;
+    height: 680px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.stopWatch{
+    background-image: url('../img/SWlayput.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayFormat{
+    background-color: rgb(43, 43, 43);
+    color: white;
+    font-size: 20px;
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 4px;
+}
+
+#display{
+    background-color: rgb(43, 43, 43);
+    width: fit-content;
+    color: white;
+    padding: 25px;
+    border-radius: 50px;
+    font-size: 36px;
+}
+
+/* ------------------ StopWatch buttons ------------------- */
+
+.stopWatch .buttons{
+    font-size: 20px;
+    width: 80px;
+    text-align: center;
+    padding: 6px;
+    border-radius: 5px;
+    border-top: 4px solid gray;
+    margin: 2px;
+    background-color: rgb(43, 43, 43);
+    color: white;
+    position: absolute;
+    transition: all 0.1s ease-in-out 0s;
+}
+
+.stopWatch .buttons:hover{
+    cursor: pointer;
+    color: rgb(105, 247, 105);
+    scale: 0.9;
+}
+
+
+/* ------- Start button positioning */
+#startPause{
+    top: 45px;
+    left: 45px;
+    transform: rotateZ(-45deg);
+}
+
+
+/* ------- Lap button positioning */
+#lap{
+    top: 45px;
+    right: 45px;
+    transform: rotateZ(45deg);
+}
+
+
+/* ------- Reset button positioning */
+#reset{
+    top: 160px;
+    left: -10px;
+    transform: rotateZ(-90deg);
+}
+
+
+/*  =========================== SW Media queries =========================== */
+
+@media (max-width : 480px ){
+
+.container{
+    width: 460px;
+    height: 460px;
+}
+
+    .stopWatch{
+        width: 100vw;
+    }
+
+
+/* ------- Start button positioning */
+#startPause{
+    top: 70px;
+    left: 8px;
+    transform: rotateZ(-45deg);
+}
+
+
+/* ------- Lap button positioning */
+#lap{
+    top: 70px;
+    right: 8px;
+    transform: rotateZ(45deg);
+}
+
+#laps{
+    width: 100vw;
+}
+
+/* ------- Reset button positioning */
+#reset{
+    top: 170px;
+    left: -45px;
+    transform: rotateZ(-90deg);
+}
+
+.lapTable{
+    width: 100vw;
+}
+}
+
+/* ---------------------- Laps ---------------------- */
+
+#laps {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(202, 202, 202, 0.452);
+    width: 500px; 
+    height: 600px;
+overflow-y:auto;
+scroll-behavior: smooth;
+}
+
+.lapTable {
+    margin: 60px;
+    background-color: rgba(82, 82, 82, 0.74);
+   width: fit-content;
+   padding: 6px;
+   border-radius: 10px;
+}
+
+.lapTable h4{
+    color: rgba(161, 255, 107, 0.897);
+    text-align: center;
+    font-size: 22px;
+
+    padding: 6px;
+    margin: 6px;
+    
+
+
+}
+
+#laps li {
+    color: white;
+    background-color: rgba(8, 8, 8, 0.459);
+    font-size: 22px;
+    padding: 6px;
+    margin: 6px;
+}
